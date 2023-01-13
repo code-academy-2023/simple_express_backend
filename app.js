@@ -1,6 +1,7 @@
 const express = require('express');
 const app = express();
 const bookRouter=require('./controllers/book');
+const borrowerRouter=require('./controllers/borrower');
 
 
 app.use(express.json());
@@ -15,6 +16,7 @@ else {
 }
 
 app.use('/book',bookRouter);
+app.use('/borrower',borrowerRouter);
 
 app.get('/',
     function(request, response){
