@@ -1,5 +1,8 @@
 const express = require('express');
 const app = express();
+const bookRouter=require('./controllers/book');
+
+
 app.use(express.json());
 app.use(express.urlencoded({extended:false}));
 
@@ -10,6 +13,8 @@ if(process.env.PORT != undefined){
 else {
   port='3000';
 }
+
+app.use('/book',bookRouter);
 
 app.get('/',
     function(request, response){
