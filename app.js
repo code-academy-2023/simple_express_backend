@@ -1,6 +1,12 @@
 const express = require('express');
 const app = express();
-const port = 3000;
+var port;
+if(process.env.PORT != undefined){
+  port=process.env.PORT;
+}
+else {
+  port='3000';
+}
 
 app.get('/',
     function(request, response){
