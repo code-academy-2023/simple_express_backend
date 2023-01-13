@@ -13,7 +13,7 @@ const book={
         return bookArray[id];
     },
     addBook:function(addData){
-        let sql="insert into book values("+addData.name+","+addData.author+")";
+        let sql="insert into book(name,author) values("+addData.name+","+addData.author+")";
         return sql;
     },
     updateBook:function(id,updateData){

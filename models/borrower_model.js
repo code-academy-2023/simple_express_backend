@@ -19,11 +19,11 @@ const borrower={
         return sql;
     },
     updateBorrower:function(id,updateData){
-        let sql="update borrower set fname="+updateData.fname+", lname="+updateData.lname+" where idborrower="+id+")";
+        let sql="update borrower set fname="+updateData.fname+", lname="+updateData.lname+" where idBorrower="+id+")";
         return sql;
     },
     deleteBorrower:function(id){
-        let sql="delete from borrower where idborrower="+id;
+        let sql="delete from borrower where idBorrower="+id;
         return sql;
     }
 }

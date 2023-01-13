@@ -12,6 +12,7 @@ Sen tunnistaa sanasta use.
 
 ## Tietokanta
 
+Book-taulu
 <pre>
 create database library;
 use library;
@@ -25,4 +26,14 @@ create table book(
 insert into book(name,author) values('Javan perusteet','Teppo Testi');
 </pre>
 
+Borrower-taulu
+<pre>
+create table borrower(
+    idBorrower int primary key auto_increment,
+    fname varchar(150),
+    lname varchar(50)
+);
+
+insert into borrower(fname,lname) values('Teppo','Testi');
+</pre>
 
