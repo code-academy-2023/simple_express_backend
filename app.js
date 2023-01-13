@@ -1,5 +1,8 @@
 const express = require('express');
 const app = express();
+app.use(express.json());
+app.use(express.urlencoded({extended:false}));
+
 var port;
 if(process.env.PORT != undefined){
   port=process.env.PORT;
@@ -40,6 +43,16 @@ app.get('/sayhello/:fname',
         console.log("test");
         let fn=request.params.fname;
         response.send("Terve "+fn);
+    }
+);
+
+app.post('/example1',
+    function(request,response){
+        console.log("post kutsu");
+        let fn=request.body.fname;
+        let ln=request.body.lname;
+        console.log(fn);
+        response.send("Terve "+fn+" "+ln);
     }
 );
 
