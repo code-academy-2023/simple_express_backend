@@ -31,14 +31,15 @@ controller.post('/',
 controller.put('/:id',
     function(request,response){
         let idBook=request.params.id;
-        let newName=request.body.name;
-        let newAuthor=request.body.author;
-        response.json(idBook+" "+newName+" "+newAuthor);
+        let updateBook=request.body;
+        let data=book.updateBook(idBook, updateBook);
+        response.json(data);
     }
 );
 controller.delete('/:id',
     function(request,response){
-        response.send("Poistetaan kirja, jonka id = "+request.params.id);
+        let data=book.deleteBook(request.params.id);
+        response.json(data);
     }
 );
 
