@@ -9,3 +9,20 @@ Sovellus tehdään MVC-mallin mukaisesti ja tähän backendiin toteutetaan
 
 On funktio, joka suoritetaan ilman että sitä tarvitsee "kutsua".
 Sen tunnistaa sanasta use.
+
+## Tietokanta
+
+<pre>
+create database library;
+use library;
+
+create table book(
+    idBook int primary key auto_increment,
+    name varchar(150),
+    author varchar(50)
+);
+
+insert into book(name,author) values('Javan perusteet','Teppo Testi');
+</pre>
+
+
