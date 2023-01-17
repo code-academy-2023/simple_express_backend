@@ -35,5 +35,6 @@ create table borrower(
 );
 
 insert into borrower(fname,lname) values('Teppo','Testi');
+
 </pre>
 
